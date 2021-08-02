@@ -110,7 +110,7 @@ const questions: Array<Question> = [
   {
     question:
       'A safe gap of at least __________ must be observed and complied, when passing a broken-down vehicle.',
-    options: ['10 metre', '03 metres', '05 metres'],
+    options: ['1.0 metre', '0.3 metres', '0.5 metres'],
   },
   {
     question: 'Upon hearing the siren of a fire engine, you should',
@@ -489,7 +489,7 @@ const questions: Array<Question> = [
   {
     question:
       'There should be a gap of at least __________ when passing pedestrians that are facing traffic walking on tarmac.',
-    options: ['1 metre', '05 metres', '15 metres'],
+    options: ['1 metre', '0.5 metres', '1.5 metres'],
   },
   {
     question:
@@ -583,7 +583,7 @@ const questions: Array<Question> = [
     ],
   },
   {
-    question: 'Which of the below is the most vulnerable group',
+    question: 'Which of the below is the most vulnerable group?',
     options: [
       'cyclists, pedestrians and motorcyclists.',
       'car drivers.',
@@ -802,7 +802,7 @@ const questions: Array<Question> = [
   {
     question:
       'When a rider sees a pedestrian walking against the traffic flow, what should the distance between the rider and the pedestrian be?',
-    options: ['1 metre.', '15 metres.', '2 metres.'],
+    options: ['1 metre.', '1.5 metres.', '2 metres.'],
   },
   {
     question: 'What should a rider do after passing through a flood?',
@@ -1617,7 +1617,7 @@ const questions: Array<Question> = [
   },
   {
     question: 'The tyre tread depth of a motorcycle should be not less than',
-    options: ['16 mm.', '16 mm.', '016 mm.'],
+    options: ['1.6 mm.', '16 mm.', '0.  16 mm.'],
   },
   {
     question:
@@ -1771,15 +1771,15 @@ const questions: Array<Question> = [
   {
     question:
       'When passing a pedestrian walking on the pavement against traffic flow, we should keep a gap of',
-    options: ['1 metre.', '15 metres.', '2 metres.'],
+    options: ['1 metre.', '1.5 metres.', '2 metres.'],
   },
   {
     question: 'When passing parked vehicles, riders must keep a gap of',
-    options: ['1 metre.', '5 metres.', '15 metres.'],
+    options: ['1 metre.', '5 metres.', '1.5 metres.'],
   },
   {
     question: 'While passing moving vehicles, riders should keep a distance of',
-    options: ['15 metres.', '1 metre.', '2 metres.'],
+    options: ['1.5 metres.', '1 metre.', '2 metres.'],
   },
   {
     question:
