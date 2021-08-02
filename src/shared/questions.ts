@@ -1,7 +1,7 @@
 import type { Question } from './types';
 
 /*
- * Questions extracted from:
+ * Questions and Answers extracted from:
  * https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/
  */
 const questions: Array<Question> = [
@@ -592,7 +592,7 @@ const questions: Array<Question> = [
   },
   {
     question:
-      'The stopping distance on the wet road is longer as the __________ force is less',
+      'The stopping distance on the wet road is longer as the __________ force is less.',
     options: ['frictional', 'centrifugal', 'kinetic'],
   },
   {
@@ -1724,7 +1724,7 @@ const questions: Array<Question> = [
     options: ['both a & b.', 'skidding.', 'a rear collision.'],
   },
   {
-    question: 'To warn tailgaters, simply apply the __________ technique',
+    question: 'To warn tailgaters, simply apply the __________ technique.',
     options: ['intermittent brake', 'emergency brake', 'engine brake'],
   },
   {
@@ -1771,15 +1771,15 @@ const questions: Array<Question> = [
   {
     question:
       'When passing a pedestrian walking on the pavement against traffic flow, we should keep a gap of',
-    options: ['1 m.', '15 m.', '2 m.'],
+    options: ['1 metre.', '15 metres.', '2 metres.'],
   },
   {
     question: 'When passing parked vehicles, riders must keep a gap of',
-    options: ['1 m.', '05 m.', '15 m.'],
+    options: ['1 metre.', '5 metres.', '15 metres.'],
   },
   {
     question: 'While passing moving vehicles, riders should keep a distance of',
-    options: ['15 m.', '1 m.', '2 m.'],
+    options: ['15 metres.', '1 metre.', '2 metres.'],
   },
   {
     question:
@@ -1800,7 +1800,7 @@ const questions: Array<Question> = [
     ],
   },
   {
-    question: 'The minimum age to ride as a pillion is __________ years old',
+    question: 'The minimum age to ride as a pillion is __________ years old.',
     options: ['10', '6', '12'],
   },
   {
@@ -1839,7 +1839,7 @@ const questions: Array<Question> = [
   },
   {
     question:
-      'When stopping upslope, the rider should apply __________ to prevent rolling backwards',
+      'When stopping upslope, the rider should apply __________ to prevent rolling backwards.',
     options: [
       'the rear brake followed by the front brake',
       'the front brake followed by the rear brake',
