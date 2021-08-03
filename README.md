@@ -4,7 +4,7 @@
 
 ## Description
 
-This is a simple quiz application for anyone to prepare for the Riding Theory Test (RTT). All questions and answers were taken from [GuideScroll 2B RTT Question Bank](https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/).
+This is a simple quiz application for anyone who would like to prepare for the Riding Theory Test (RTT). All questions and answers were taken from [GuideScroll 2B RTT Question Bank](https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/).
 
 ## Any feedback?
 

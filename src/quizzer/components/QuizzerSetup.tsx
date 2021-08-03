@@ -10,7 +10,7 @@ import {
   Menu,
   Row,
 } from 'antd';
-import { NumberOutlined } from '@ant-design/icons';
+import { GithubFilled, NumberOutlined } from '@ant-design/icons';
 
 import type { Settings } from '../../shared/types';
 import {
@@ -42,10 +42,26 @@ const QuizzerSetup = ({
 
   return (
     <Card
-      title={<h2 className={s.title}>RTT Quizzer</h2>}
+      title={
+        <Row align="middle" justify="space-between">
+          <Col>
+            <h2 className={s.title}>RTT Quizzer</h2>
+          </Col>
+          <Col>
+            <Button
+              type="default"
+              size="large"
+              shape="circle"
+              icon={<GithubFilled />}
+              href="https://github.com/teclu/RTT-Quizzer"
+            />
+          </Col>
+        </Row>
+      }
       actions={[
         <Button
           type="primary"
+          size="large"
           className={s.startRttQuizzer}
           onClick={onSubmitClick}
         >
@@ -53,21 +69,31 @@ const QuizzerSetup = ({
         </Button>,
       ]}
     >
-      <h3>Welcome to the Riding Theory Test (RTT) Quizzer!</h3>
+      <h3>Welcome to the RTT Quizzer!</h3>
+      <p>
+        This is a simple quiz application for anyone who would like to prepare
+        for the Riding Theory Test (RTT).
+      </p>
       <ul>
         <li>
-          There are <b>{totalQuestionCount}</b> text-only questions that can be
-          attempted.
+          <p>
+            There are <b>{totalQuestionCount}</b> text-only questions that can
+            be attempted.
+          </p>
         </li>
         <li>
-          Questions were taken from{' '}
-          <a href="https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/">
-            GuideScroll 2B RTT Question Bank
-          </a>
-          .
+          <p>
+            All questions and answers were taken from{' '}
+            <a href="https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/">
+              GuideScroll 2B RTT Question Bank
+            </a>
+            .
+          </p>
         </li>
         <li>
-          The passing score is <b>{PASSING_SCORE}%</b>.
+          <p>
+            The minimum passing score is <b>{PASSING_SCORE}%</b>.
+          </p>
         </li>
       </ul>
       <Divider />

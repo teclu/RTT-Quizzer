@@ -144,7 +144,7 @@ const QuizzerTaker = ({
               size="small"
               onClick={onQuestionStepClick(index)}
             >
-              View Question
+              View
             </Button>,
           ]}
         >
@@ -173,11 +173,19 @@ const QuizzerTaker = ({
             </Col>
             {status === Status.Results && (
               <Col>
-                <Space>
-                  <Button type="default" onClick={onReturnToLandingPageClick}>
+                <Space size="large">
+                  <Button
+                    type="default"
+                    size="large"
+                    onClick={onReturnToLandingPageClick}
+                  >
                     Return Home
                   </Button>
-                  <Button type="primary" onClick={onReturnToResultsPageClick}>
+                  <Button
+                    type="primary"
+                    size="large"
+                    onClick={onReturnToResultsPageClick}
+                  >
                     View Results
                   </Button>
                 </Space>
@@ -188,17 +196,18 @@ const QuizzerTaker = ({
         actions={[
           <Button
             type="default"
+            size="large"
             className={s.stepButton}
             disabled={currentIndex === 0}
             onClick={onQuestionStepClick(currentIndex - 1)}
           >
             Previous
           </Button>,
-          <Space>
+          <Space className={s.jumpToQuestion}>
             <InputNumber
               min={1}
               max={generatedQuestions.length}
-              className={s.jumpToQuestion}
+              className={s.jumpToQuestionInput}
               value={currentIndex + 1}
               onBlur={onJumpToQuestionBlur}
               onPressEnter={onJumpToQuestionEnter}
@@ -211,6 +220,7 @@ const QuizzerTaker = ({
           currentIndex < generatedQuestions.length - 1 ||
           status === Status.Results ? (
             <Button
+              size="large"
               type={status === Status.Quiz ? 'primary' : 'default'}
               className={s.stepButton}
               disabled={currentIndex === generatedQuestions.length - 1}
@@ -221,10 +231,11 @@ const QuizzerTaker = ({
           ) : (
             <Button
               type="primary"
+              size="large"
               className={s.stepButton}
               onClick={onSubmitAnswersClick}
             >
-              Submit Answers
+              Submit
             </Button>
           ),
         ]}
@@ -286,6 +297,7 @@ const QuizzerTaker = ({
       actions={[
         <Button
           type="default"
+          size="large"
           className={s.stepButton}
           onClick={onReturnToLandingPageClick}
         >
@@ -293,6 +305,7 @@ const QuizzerTaker = ({
         </Button>,
         <Button
           type="primary"
+          size="large"
           className={s.stepButton}
           onClick={onQuestionStepClick(currentIndex + 1)}
         >
