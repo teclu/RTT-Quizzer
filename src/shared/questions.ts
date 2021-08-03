@@ -109,7 +109,7 @@ const questions: Array<Question> = [
   },
   {
     question:
-      'A safe gap of at least __________ must be observed and complied, when passing a broken-down vehicle.',
+      'A safe gap of at least __________ must be observed and complied when passing a broken-down vehicle.',
     options: ['1.0 metre', '0.3 metres', '0.5 metres'],
   },
   {
@@ -263,7 +263,7 @@ const questions: Array<Question> = [
   },
   {
     question:
-      'Centrifugal force will push your motorcycle __________, when you negotiate a sharp bend.',
+      'Centrifugal force will push your motorcycle __________ when you negotiate a sharp bend.',
     options: ['outwards', 'inwards', 'forward'],
   },
   {
@@ -597,7 +597,7 @@ const questions: Array<Question> = [
   },
   {
     question:
-      'In broad daylight, why is it necessary for motorcyclists to switch on their motorcycle headlines to low beam (normal light)?',
+      'In broad daylight, why is it necessary for motorcyclists to switch on their motorcycle headlights to low beam (normal light)?',
     options: [
       'To be seen more easily by other road users.',
       'To improve the rider’s vision.',
@@ -1957,9 +1957,9 @@ const questions: Array<Question> = [
   {
     question: 'Which of the following is true about Reaction Distance?',
     options: [
-      'Reaction distance is the distance travelled from the moment, the hazard is seen to the time the brake is applied.',
+      'Reaction distance is the distance travelled from the moment the hazard is seen to the time the brake is applied.',
       'Reaction distance is the distance travelled from the moment the brake is applied to the time the vehicle comes to a stop.',
-      'Reaction distance is the distance travelled from the moment, the hazard is seen to the time the vehicle comes to a stop.',
+      'Reaction distance is the distance travelled from the moment the hazard is seen to the time the vehicle comes to a stop.',
     ],
   },
   {
@@ -1974,9 +1974,9 @@ const questions: Array<Question> = [
   {
     question: 'The road shoulder can be found on all',
     options: [
+      'expressways only.',
       'highways, major roads and filter lanes.',
       'highways and expressways.',
-      'expressways only.',
     ],
   },
   {
