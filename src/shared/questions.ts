@@ -2188,4 +2188,6 @@ const questions: Array<Question> = [
   },
 ];
 
+export const totalQuestionCount: number = questions.length;
+
 export default questions;

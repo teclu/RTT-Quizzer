@@ -19,7 +19,9 @@ const shuffleArray = <T>(array: Array<T>): Array<T> => {
   return array;
 };
 
-const generateQuestions = (): Array<GeneratedQuestion> =>
+const generateQuestions = (
+  total: number = questions.length,
+): Array<GeneratedQuestion> =>
   shuffleArray<GeneratedQuestion>(
     questions.map((q: Question): GeneratedQuestion => {
       const answer: string = q.options[0];
@@ -31,6 +33,6 @@ const generateQuestions = (): Array<GeneratedQuestion> =>
       };
       return generatedQuestion;
     }),
-  );
+  ).slice(0, total);
 
 export default generateQuestions;

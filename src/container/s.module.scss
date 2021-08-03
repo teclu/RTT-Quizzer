@@ -1,5 +1,12 @@
 .layout {
-  background: #f0f0f0;
   padding: 16px;
-  min-height: 100vh;
+}
+
+:global {
+  body {
+    background: #f0f0f0 !important;
+  }
+  .ant-card-body {
+    height: 80vh !important;
+  }
 }

@@ -2,25 +2,27 @@ import React from 'react';
 import { Button, Card, Col, Row } from 'antd';
 
 import type { GeneratedQuestion } from '../../shared/types';
-import generateQuestions from '../../shared/generateQuestions';
 
-const Quizzer = (): JSX.Element => {
-  const [generatedQuestions, setGeneratedQuestions] = React.useState<
-    Array<GeneratedQuestion>
-  >([]);
+import s from '../s.module.scss';
+
+type QuizzerTakerProps = {
+  generatedQuestions: Array<GeneratedQuestion>;
+};
+
+const QuizzerTaker = ({
+  generatedQuestions,
+}: QuizzerTakerProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = React.useState<number>(0);
 
   const changeToQuestion = (change: number) => (): void =>
     setCurrentIndex(currentIndex + change);
 
-  React.useEffect((): void => setGeneratedQuestions(generateQuestions()), []);
-
-  return generatedQuestions.length > 0 ? (
+  return (
     <Card
       title={
         <Row align="middle" justify="space-between">
           <Col>
-            <h2 style={{ marginBottom: '0px' }}>
+            <h2 className={s.title}>
               Question {currentIndex + 1}/{generatedQuestions.length}
             </h2>
           </Col>
@@ -59,9 +61,7 @@ const Quizzer = (): JSX.Element => {
         },
       )}
     </Card>
-  ) : (
-    <h3>Loading Placeholder</h3>
   );
 };
 
-export default Quizzer;
+export default QuizzerTaker;
