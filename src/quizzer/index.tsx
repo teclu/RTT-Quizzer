@@ -18,7 +18,7 @@ const Quizzer = (): JSX.Element => {
   const [status, setStatus] = React.useState<Status>(Status.Setup);
 
   React.useEffect((): void => {
-    if (status === Status.Setup && generateQuestions.length > 0) {
+    if (status === Status.Setup) {
       setGeneratedQuestions([]);
     } else if (status === Status.Quiz) {
       setGeneratedQuestions(generateQuestions(settings.numberOfQuestions));

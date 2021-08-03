@@ -36,19 +36,23 @@ const QuizzerTaker = ({
 }: QuizzerTakerProps): JSX.Element => {
   const [currentIndex, setCurrentIndex] = React.useState<number>(0);
   const [selectedOptions, setSelectedOptions] = React.useState<Array<number>>(
-    [],
+    generatedQuestions.map((): number => UNANSWERED),
   );
 
   const incorrectQuestionIndices: Array<number> =
     React.useMemo((): Array<number> => {
       const incorrectQuestionIndices: Array<number> = [];
-      selectedOptions.forEach((selectedOption: number, index: number): void => {
-        if (selectedOption !== generatedQuestions[index].answerIndex) {
-          incorrectQuestionIndices.push(index);
-        }
-      });
+      if (generatedQuestions.length > 0) {
+        selectedOptions.forEach(
+          (selectedOption: number, index: number): void => {
+            if (selectedOption !== generatedQuestions[index].answerIndex) {
+              incorrectQuestionIndices.push(index);
+            }
+          },
+        );
+      }
       return incorrectQuestionIndices;
-    }, [selectedOptions]);
+    }, [generatedQuestions, selectedOptions]);
 
   const scoreTotal: number = React.useMemo(
     (): number => generatedQuestions.length - incorrectQuestionIndices.length,
@@ -117,7 +121,7 @@ const QuizzerTaker = ({
   };
 
   const generateQuestionStatusIcon = (index: number): JSX.Element | null =>
-    status === Status.Results ? (
+    status === Status.Results && generatedQuestions.length > 0 ? (
       generatedQuestions[index].answerIndex === selectedOptions[index] ? (
         <CheckCircleTwoTone twoToneColor={Colour.Green} />
       ) : selectedOptions[index] !== UNANSWERED ? (
@@ -153,12 +157,6 @@ const QuizzerTaker = ({
     }
     return listItems;
   };
-
-  React.useEffect(
-    (): void =>
-      setSelectedOptions(generatedQuestions.map((): number => UNANSWERED)),
-    [],
-  );
 
   if (currentIndex >= 0) {
     return (
