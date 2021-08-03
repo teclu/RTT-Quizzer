@@ -55,7 +55,7 @@ const questions: Array<Question> = [
   {
     question: 'After overtaking, you should',
     options: [
-      'return to the left land when the overtaken vehicle appears in the left wing mirror.',
+      'return to the left lane when the overtaken vehicle appears in the left wing mirror.',
       'return to the left lane immediately when you are ahead of the overtaken vehicle.',
       'continue to ride on the right lane.',
     ],

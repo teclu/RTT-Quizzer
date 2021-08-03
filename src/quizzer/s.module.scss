@@ -21,12 +21,14 @@
 }
 
 .optionButton {
-  display: inline-block;
   font-size: 20px !important;
-  height: 64px !important;
+  height: auto !important;
+  min-height: 64px !important;
   margin: 24px 0px;
+  padding: 24px !important;
   text-align: left !important;
   width: 100%;
+  white-space: normal !important;
 }
 
 .resultBreakdown {

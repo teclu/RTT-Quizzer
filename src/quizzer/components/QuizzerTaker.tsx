@@ -21,6 +21,7 @@ import { PASSING_SCORE, UNANSWERED } from '../../shared/constants';
 import { Colour, Status } from '../../shared/enums';
 
 import s from '../s.module.scss';
+import { SpaceContext } from 'antd/lib/space';
 
 type QuizzerTakerProps = {
   generatedQuestions: Array<GeneratedQuestion>;
@@ -270,10 +271,10 @@ const QuizzerTaker = ({
                       : undefined,
                 }}
               >
-                <Row gutter={16}>
-                  <Col>{['A', 'B', 'C'][index]}.</Col>
-                  <Col>{option}</Col>
-                </Row>
+                <Space size="large">
+                  <span>{['A', 'B', 'C'][index]}.</span>
+                  <span>{option}</span>
+                </Space>
               </Button>
             );
           },
