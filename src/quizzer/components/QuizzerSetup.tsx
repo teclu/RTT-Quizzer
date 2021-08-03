@@ -33,6 +33,11 @@ const QuizzerSetup = ({
   setSettings,
   setStatus,
 }: QuizzerSetupProps): JSX.Element => {
+  const isValidSettings: boolean = React.useMemo(
+    (): boolean => settings.numberOfQuestions > 0,
+    [settings],
+  );
+
   const onSettingsChange =
     (key: string) =>
     (value?: string | number): void =>
@@ -63,6 +68,7 @@ const QuizzerSetup = ({
           type="primary"
           size="large"
           className={s.startRttQuizzer}
+          disabled={!isValidSettings}
           onClick={onSubmitClick}
         >
           Start RTT Quizzer
