@@ -1,0 +1,54 @@
+._incorrectQuestionColumn_14qrm_1 {
+  max-width: 62.5% !important;
+}
+
+._incorrectQuestionsList_14qrm_5 {
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+._incorrectQuestionsRow_14qrm_11 {
+  width: 100%;
+}
+
+._jumpToQuestion_14qrm_15 {
+  margin-top: 4px;
+}
+
+._jumpToQuestionInput_14qrm_19 {
+  width: 45px !important;
+}
+
+._optionButton_14qrm_23 {
+  font-size: 20px !important;
+  height: auto !important;
+  min-height: 64px !important;
+  margin: 24px 0px;
+  padding: 24px !important;
+  text-align: left !important;
+  width: 100%;
+  white-space: normal !important;
+}
+
+._resultBreakdown_14qrm_34 {
+  margin-top: 32px;
+  font-size: 16px;
+}
+
+._resultCircle_14qrm_39 {
+  text-align: center;
+  width: 100%;
+}
+
+._startRttQuizzer_14qrm_44 {
+  width: 98.125%;
+}
+
+._stepButton_14qrm_48 {
+  width: 90%;
+}
+
+._title_14qrm_52 {
+  margin-bottom: 0px !important;
+}
