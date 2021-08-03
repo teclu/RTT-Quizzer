@@ -209,10 +209,12 @@ const QuizzerTaker = ({
               <b>{generatedQuestions.length}</b>
             </a>
           </Space>,
-          currentIndex < generatedQuestions.length - 1 ? (
+          currentIndex < generatedQuestions.length - 1 ||
+          status === Status.Results ? (
             <Button
               type={status === Status.Quiz ? 'primary' : 'default'}
               className={s.stepButton}
+              disabled={currentIndex === generatedQuestions.length - 1}
               onClick={onQuestionStepClick(currentIndex + 1)}
             >
               Next
