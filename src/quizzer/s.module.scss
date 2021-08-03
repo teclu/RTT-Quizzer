@@ -1,13 +1,15 @@
-.title {
-  margin-bottom: 0px !important;
+.incorrectQuestionColumn {
+  max-width: 62.5% !important;
 }
 
-.startRttQuizzer {
-  width: 98.125%;
+.incorrectQuestionsList {
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: scroll;
 }
 
-.stepButton {
-  width: 90%;
+.incorrectQuestionsRow {
+  width: 100%;
 }
 
 .jumpToQuestion {
@@ -15,13 +17,7 @@
 }
 
 .jumpToQuestionInput {
-  width: 65px !important;
-}
-
-.incorrectQuestionsList {
-  margin-top: 8px;
-  max-height: 300px;
-  overflow-y: scroll;
+  width: 45px !important;
 }
 
 .optionButton {
@@ -43,4 +39,15 @@
 .resultCircle {
   text-align: center;
   width: 100%;
+}
+.startRttQuizzer {
+  width: 98.125%;
+}
+
+.stepButton {
+  width: 90%;
+}
+
+.title {
+  margin-bottom: 0px !important;
 }

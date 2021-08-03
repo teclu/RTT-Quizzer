@@ -21,7 +21,6 @@ import { PASSING_SCORE, UNANSWERED } from '../../shared/constants';
 import { Colour, Status } from '../../shared/enums';
 
 import s from '../s.module.scss';
-import { SpaceContext } from 'antd/lib/space';
 
 type QuizzerTakerProps = {
   generatedQuestions: Array<GeneratedQuestion>;
@@ -120,37 +119,42 @@ const QuizzerTaker = ({
     }
   };
 
-  const generateQuestionStatusIcon = (index: number): JSX.Element | null =>
-    status === Status.Results && generatedQuestions.length > 0 ? (
-      generatedQuestions[index].answerIndex === selectedOptions[index] ? (
-        <CheckCircleTwoTone twoToneColor={Colour.Green} />
-      ) : selectedOptions[index] !== UNANSWERED ? (
-        <CloseCircleTwoTone twoToneColor={Colour.Red} />
-      ) : (
-        <QuestionCircleTwoTone twoToneColor={Colour.Orange} />
-      )
-    ) : null;
+  const generateQuestionStatusIcon = (index: number): JSX.Element => (
+    <>
+      {status === Status.Results && generatedQuestions.length > 0 ? (
+        generatedQuestions[index].answerIndex === selectedOptions[index] ? (
+          <CheckCircleTwoTone twoToneColor={Colour.Green} />
+        ) : selectedOptions[index] !== UNANSWERED ? (
+          <CloseCircleTwoTone twoToneColor={Colour.Red} />
+        ) : (
+          <QuestionCircleTwoTone twoToneColor={Colour.Orange} />
+        )
+      ) : null}
+    </>
+  );
 
   const incorrectQuestionList = (): Array<JSX.Element> => {
     const listItems: Array<JSX.Element> = [];
     for (const index of incorrectQuestionIndices) {
       listItems.push(
-        <List.Item
-          key={`incorrect-question-${index}`}
-          actions={[
-            <>{generateQuestionStatusIcon(index)}</>,
-            <Button
-              type="link"
-              size="small"
-              onClick={onQuestionStepClick(index)}
-            >
-              View
-            </Button>,
-          ]}
-        >
-          <Row gutter={16}>
-            <Col>{index + 1}.</Col>
-            <Col>{generatedQuestions[index].question}</Col>
+        <List.Item key={`incorrect-question-${index}`}>
+          <Row
+            align="middle"
+            justify="space-between"
+            className={s.incorrectQuestionsRow}
+          >
+            <Col className={s.incorrectQuestionColumn}>
+              <Space size="large">
+                <span>{index + 1}.</span>
+                <span>{generatedQuestions[index].question}</span>
+              </Space>
+            </Col>
+            <Col>
+              <Space>
+                <span>{generateQuestionStatusIcon(index)}</span>
+                <a onClick={onQuestionStepClick(index)}>View</a>
+              </Space>
+            </Col>
           </Row>
         </List.Item>,
       );
@@ -172,24 +176,13 @@ const QuizzerTaker = ({
               </h2>
             </Col>
             {status === Status.Results && (
-              <Col>
-                <Space size="large">
-                  <Button
-                    type="default"
-                    size="large"
-                    onClick={onReturnToLandingPageClick}
-                  >
-                    Return Home
-                  </Button>
-                  <Button
-                    type="primary"
-                    size="large"
-                    onClick={onReturnToResultsPageClick}
-                  >
-                    View Results
-                  </Button>
-                </Space>
-              </Col>
+              <Button
+                type="primary"
+                size="large"
+                onClick={onReturnToResultsPageClick}
+              >
+                Results
+              </Button>
             )}
           </Row>
         }
@@ -203,7 +196,7 @@ const QuizzerTaker = ({
           >
             Previous
           </Button>,
-          <Space className={s.jumpToQuestion}>
+          <Space size="small" className={s.jumpToQuestion}>
             <InputNumber
               min={1}
               max={generatedQuestions.length}
@@ -301,7 +294,7 @@ const QuizzerTaker = ({
           className={s.stepButton}
           onClick={onReturnToLandingPageClick}
         >
-          Return Home
+          Close
         </Button>,
         <Button
           type="primary"
@@ -309,7 +302,7 @@ const QuizzerTaker = ({
           className={s.stepButton}
           onClick={onQuestionStepClick(currentIndex + 1)}
         >
-          Review Questions
+          Review
         </Button>,
       ]}
     >
@@ -341,9 +334,14 @@ const QuizzerTaker = ({
         <>
           <Divider />
           <h3>
-            <b>{incorrectQuestionIndices.length}</b> Incorrect Questions
+            <b>{incorrectQuestionIndices.length}</b> Incorrect Question
+            {incorrectQuestionIndices.length > 1 && 's'}
           </h3>
-          <List className={s.incorrectQuestionsList} bordered={true}>
+          <List
+            size="large"
+            className={s.incorrectQuestionsList}
+            bordered={true}
+          >
             {incorrectQuestionList()}
           </List>
         </>
