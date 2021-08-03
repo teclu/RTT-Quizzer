@@ -13,8 +13,13 @@ import {
 import { NumberOutlined } from '@ant-design/icons';
 
 import type { Settings } from '../../shared/types';
+import {
+  PASSING_SCORE,
+  PRESET_NUMBER_OF_QUESTIONS,
+} from '../../shared/constants';
 import { Status } from '../../shared/enums';
 import { totalQuestionCount } from '../../shared/questions';
+
 import s from '../s.module.scss';
 
 type QuizzerSetupProps = {
@@ -33,7 +38,7 @@ const QuizzerSetup = ({
     (value?: string | number): void =>
       setSettings({ ...settings, [key]: value });
 
-  const onSubmitClick = (): void => setStatus(Status.Start);
+  const onSubmitClick = (): void => setStatus(Status.Quiz);
 
   return (
     <Card
@@ -61,6 +66,9 @@ const QuizzerSetup = ({
           </a>
           .
         </li>
+        <li>
+          The passing score is <b>{PASSING_SCORE}%</b>.
+        </li>
       </ul>
       <Divider />
       <h3>Quizzer Setup</h3>
@@ -69,7 +77,7 @@ const QuizzerSetup = ({
           <Row>
             <Col>
               <InputNumber
-                min={50}
+                min={1}
                 max={totalQuestionCount}
                 value={settings.numberOfQuestions}
                 onChange={onSettingsChange('numberOfQuestions')}
@@ -79,7 +87,7 @@ const QuizzerSetup = ({
               <Dropdown
                 overlay={
                   <Menu>
-                    {[50, 70, totalQuestionCount].map(
+                    {[...PRESET_NUMBER_OF_QUESTIONS, totalQuestionCount].map(
                       (
                         numberOfQuestionsToSet: number,
                         index: number,
@@ -99,13 +107,8 @@ const QuizzerSetup = ({
                                 : undefined,
                           }}
                         >
-                          {numberOfQuestionsToSet} (
-                          {index === 2
-                            ? 'Max'
-                            : index === 1
-                            ? 'Default'
-                            : 'Min'}
-                          )
+                          {numberOfQuestionsToSet}
+                          {index === 2 && ' (All)'}
                         </Menu.Item>
                       ),
                     )}

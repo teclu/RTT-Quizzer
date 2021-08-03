@@ -1,7 +1,40 @@
-h2.title {
-  margin-bottom: 0px;
+.title {
+  margin-bottom: 0px !important;
 }
 
-button.startRttQuizzer {
-  width: 95%;
+.startRttQuizzer {
+  width: 98.125%;
+}
+
+.stepButton {
+  width: 90%;
+}
+
+.jumpToQuestion {
+  width: 50px !important;
+}
+
+.incorrectQuestionsList {
+  margin-top: 8px;
+  max-height: 300px;
+  overflow-y: scroll;
+}
+
+.optionButton {
+  display: inline-block;
+  font-size: 20px !important;
+  height: 64px !important;
+  margin: 24px 0px;
+  text-align: left !important;
+  width: 100%;
+}
+
+.resultBreakdown {
+  margin-top: 32px;
+  font-size: 16px;
+}
+
+.resultCircle {
+  text-align: center;
+  width: 100%;
 }

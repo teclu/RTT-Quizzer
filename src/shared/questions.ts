@@ -1775,7 +1775,7 @@ const questions: Array<Question> = [
   },
   {
     question: 'When passing parked vehicles, riders must keep a gap of',
-    options: ['1 metre.', '5 metres.', '1.5 metres.'],
+    options: ['1 metre.', '0.5 metres.', '1.5 metres.'],
   },
   {
     question: 'While passing moving vehicles, riders should keep a distance of',
