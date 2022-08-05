@@ -1,8 +1,9 @@
+import { OPTION_BOTH } from './constants';
 import type { Question } from './types';
 
 /*
- * Questions and Answers extracted from:
- * https://guidescroll.com/2020/03/singapore-class-2b-riding-theory-test-question-bank/
+ * Questions and Answers extracted from GuideScroll.
+ * The correct answer is the first index of the options array.
  */
 const questions: Array<Question> = [
   {
@@ -47,7 +48,7 @@ const questions: Array<Question> = [
   {
     question: 'Riding with a bald tyre is dangerous because',
     options: [
-      'both a and b.',
+      OPTION_BOTH,
       'it increases the chance of a skid.',
       'it increases the chance of a puncture.',
     ],
@@ -945,7 +946,7 @@ const questions: Array<Question> = [
     question:
       'A traffic police officer who is directing the traffic flow overrules the following',
     options: [
-      'both of the above.',
+      'both A and B',
       'road markings and road signs.',
       'traffic regulations and traffic light signals.',
     ],
@@ -1036,7 +1037,7 @@ const questions: Array<Question> = [
   {
     question:
       'The braking effect of the engine will be __________ at lower gears as compared to higher gears.',
-    options: ['higher', 'less power', 'same as the above'],
+    options: ['higher', 'less power', 'same'],
   },
   {
     question: 'What is the real reason for brake fade?',
@@ -1625,7 +1626,7 @@ const questions: Array<Question> = [
     options: [
       'Third party cover.',
       'Comprehensive.',
-      'Third party cover and fire & theft.',
+      'Third party cover and fire and theft.',
     ],
   },
   {
@@ -1657,7 +1658,7 @@ const questions: Array<Question> = [
   {
     question:
       'Losing concentration and increased reaction time can be caused by',
-    options: ['both a & b.', 'fatigue.', 'distraction.'],
+    options: [OPTION_BOTH, 'fatigue.', 'distraction.'],
   },
   {
     question:
@@ -1676,7 +1677,7 @@ const questions: Array<Question> = [
   {
     question: 'Blind spots should be checked before',
     options: [
-      'both a & b.',
+      OPTION_BOTH,
       'turning left or right.',
       'moving off, stopping, lane departure.',
     ],
@@ -1684,7 +1685,7 @@ const questions: Array<Question> = [
   {
     question: 'Free-wheeling is caused by',
     options: [
-      'both a & b.',
+      OPTION_BOTH,
       'setting the gear to neutral while coming to a stop.',
       'pulling and holding the clutch lever too early.',
     ],
@@ -1721,7 +1722,7 @@ const questions: Array<Question> = [
   {
     question:
       'By applying intermittent braking, riders will be able to prevent',
-    options: ['both a & b.', 'skidding.', 'a rear collision.'],
+    options: [OPTION_BOTH, 'skidding.', 'a rear collision.'],
   },
   {
     question: 'To warn tailgaters, simply apply the __________ technique.',
@@ -1868,7 +1869,7 @@ const questions: Array<Question> = [
   {
     question:
       'Painted road markings can be slippery when wet. Riders should take extra care when',
-    options: ['both a & b.', 'braking.', 'turning.'],
+    options: [OPTION_BOTH, 'braking.', 'turning.'],
   },
   {
     question:
@@ -2017,7 +2018,7 @@ const questions: Array<Question> = [
   {
     question: 'Blind spots’ of a vehicle is an area which cannot be viewed by',
     options: [
-      'all of them.',
+      OPTION_BOTH,
       'the rear view mirror.',
       'left and right wings mirrors.',
     ],

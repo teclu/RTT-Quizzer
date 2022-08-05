@@ -1,5 +1,6 @@
 import type { Question, GeneratedQuestion } from './types';
 import questions from './questions';
+import { OPTION_BOTH } from './constants';
 
 /*
  * Fisher-Yates Shuffle.
@@ -27,6 +28,11 @@ const generateQuestions = (
     questions.map((q: Question): GeneratedQuestion => {
       const answer: string = q.options[0];
       const shuffledOptions: Array<string> = shuffleArray<string>(q.options);
+      if (shuffledOptions.includes(OPTION_BOTH)) {
+        const index = shuffledOptions.indexOf(OPTION_BOTH);
+        shuffledOptions.splice(index, 1);
+        shuffledOptions.push(OPTION_BOTH);
+      }
       const generatedQuestion: GeneratedQuestion = {
         question: q.question,
         options: shuffledOptions,

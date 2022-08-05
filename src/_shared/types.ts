@@ -8,5 +8,5 @@ export type Settings = {
 
 export type Question = {
   question: string;
-  options: Array<string>; // Answer is placed at index 0.
+  options: Array<string>;
 };
