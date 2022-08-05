@@ -1,5 +1,5 @@
 yarn build
-cd build
+cd dist
 touch .nojekyll
 git init
 git add -A

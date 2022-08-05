@@ -1,4 +1,3 @@
-import React from 'react';
 import Quizzer from '../quizzer';
 
 import s from './s.module.scss';

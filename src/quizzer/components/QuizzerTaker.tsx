@@ -16,9 +16,9 @@ import {
   QuestionCircleTwoTone,
 } from '@ant-design/icons';
 
-import type { GeneratedQuestion } from '../../shared/types';
 import { PASSING_SCORE, UNANSWERED } from '../../shared/constants';
 import { Colour, Status } from '../../shared/enums';
+import type { GeneratedQuestion } from '../../shared/types';
 
 import s from '../s.module.scss';
 

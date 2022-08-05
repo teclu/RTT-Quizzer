@@ -1,7 +1,7 @@
 import React from 'react';
 
-import type { GeneratedQuestion, Settings } from '../shared/types';
 import { Status } from '../shared/enums';
+import type { GeneratedQuestion, Settings } from '../shared/types';
 import generateQuestions from '../shared/generateQuestions';
 import QuizzerSetup from './components/QuizzerSetup';
 import QuizzerTaker from './components/QuizzerTaker';
@@ -14,7 +14,9 @@ const Quizzer = (): JSX.Element => {
   const [generatedQuestions, setGeneratedQuestions] = React.useState<
     Array<GeneratedQuestion>
   >([]);
+
   const [settings, setSettings] = React.useState<Settings>(DEFAULT_SETTINGS);
+
   const [status, setStatus] = React.useState<Status>(Status.Setup);
 
   React.useEffect((): void => {

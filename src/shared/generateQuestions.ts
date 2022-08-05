@@ -2,12 +2,12 @@ import type { Question, GeneratedQuestion } from './types';
 import questions from './questions';
 
 /*
- * Fisher-Yates Shuffle
+ * Fisher-Yates Shuffle.
  */
 const shuffleArray = <T>(array: Array<T>): Array<T> => {
   const shuffledArray: Array<T> = [...array];
   let currentIndex: number = array.length;
-  let randomIndex: number = 0;
+  let randomIndex = 0;
 
   while (currentIndex > 0) {
     randomIndex = Math.floor(Math.random() * currentIndex);
