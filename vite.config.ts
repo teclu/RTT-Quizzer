@@ -7,6 +7,7 @@ import sassDts from 'vite-plugin-sass-dts';
 setDefaultResultOrder('verbatim');
 
 const configuration: UserConfigExport = defineConfig({
+  base: '/RTT-Quizzer',
   plugins: [react(), sassDts()],
   server: {
     host: 'localhost',
