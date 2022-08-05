@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Status } from '../shared/enums';
-import type { GeneratedQuestion, Settings } from '../shared/types';
-import generateQuestions from '../shared/generateQuestions';
+import { Status } from '../_shared/enums';
+import type { GeneratedQuestion, Settings } from '../_shared/types';
+import generateQuestions from '../_shared/generateQuestions';
 import QuizzerSetup from './components/QuizzerSetup';
 import QuizzerTaker from './components/QuizzerTaker';
 

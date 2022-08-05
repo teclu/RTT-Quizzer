@@ -12,13 +12,13 @@ import {
 } from 'antd';
 import { GithubFilled, NumberOutlined } from '@ant-design/icons';
 
-import type { Settings } from '../../shared/types';
+import type { Settings } from '../../_shared/types';
 import {
   PASSING_SCORE,
   PRESET_NUMBER_OF_QUESTIONS,
-} from '../../shared/constants';
-import { Status } from '../../shared/enums';
-import { totalQuestionCount } from '../../shared/questions';
+} from '../../_shared/constants';
+import { Status } from '../../_shared/enums';
+import { totalQuestionCount } from '../../_shared/questions';
 
 import s from '../s.module.scss';
 
